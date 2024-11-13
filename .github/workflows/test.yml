@@ -2,9 +2,9 @@ name: test
 
 on: 
   push:
-    branches: [ master, develop ]
+    branches: [ master, develop, beta, candidate/stable ]
   pull_request:
-    branches: [ master, develop ]
+    branches: [ master, develop, beta, candidate/stable ]
   workflow_dispatch:
 
 env:
