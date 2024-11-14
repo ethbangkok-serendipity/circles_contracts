@@ -47,3 +47,8 @@ jobs:
         run: |
           forge build --skip test --sizes
         id: build-sizes
+      
+      - name: Print gas difference against a pre-existing snapshot
+        run: |
+          forge snapshot --diff
+        id: gas-diff
