@@ -13,6 +13,13 @@ contract MintPolicy is IMintPolicy {
         _;
     }
 
+    /**
+     * @notice Set crcAllowance for an address
+     */
+    function setCrcAllowance(address _user, uint256 _amount) external isAdmin {
+        crcAllowance[_user] = _amount;
+    }
+
     constructor(address _admin) {
         admin = _admin;
     }
