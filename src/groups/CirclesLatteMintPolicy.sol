@@ -9,10 +9,7 @@ contract MintPolicy is IMintPolicy {
     address public admin;
 
     modifier isAdmin() {
-        require(
-            crcAllowance[msg.sender] == 1,
-            "Only admin can call this function"
-        );
+        require(msg.sender == admin, "Only admin can call this function");
         _;
     }
 
